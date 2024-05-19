@@ -1,0 +1,81 @@
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  .titles {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+
+    h1{
+      color: #005A7A;
+      font-family: "Montserrat", sans-serif;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+    }
+    h2{
+      color: #005A7A;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  p{
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .list{
+    width: 100vw;
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  
+    .disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  
+    .tarjetonCard {
+      background-color: #E3F3FC;
+      border-radius: 16px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      height: 160px;
+      justify-content: space-between;
+      padding: 16px;
+      width: 160px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+      p:nth-child(1){
+        background-color: white;
+        width: fit-content;
+        padding: 8px 14px;
+        border-radius: 50%;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #005A7A;
+      }
+      p:nth-child(2){
+        font-size: 1rem;
+        font-weight: bold;
+        color: #005A7A;
+      }
+    }
+  
+  }
+}

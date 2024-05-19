@@ -2,26 +2,73 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './shared/components';
 
-import { HomeRoutingModule } from './home/home-routing.module';
-import { DetailRoutingModule } from './detail/detail-routing.module';
+import { ConfigComponent } from './pages/config/config.component';
+import { TarjetonEditComponent } from './pages/config/tarjeton-edit/tarjeton-edit.component';
+import { AdminScreenComponent } from './pages/admin-screen/admin-screen.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { ElectionResultsComponent } from './pages/election-results/election-results.component';
+import { TarjetonesComponent } from './pages/tarjetones/tarjetones.component';
+import { CandidatosComponent } from './pages/candidatos/candidatos.component';
+import { ConfirmComponent } from './pages/confirm/confirm.component';
+import { SuccessComponent } from './pages/success/success.component';
+
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
-    path: '**',
-    component: PageNotFoundComponent
-  }
+    path: '', 
+    redirectTo: '/modoAdmin', 
+    pathMatch: 'full' ,
+},
+{
+    path: 'config',
+    component: ConfigComponent,
+},
+{
+    path: 'editTarjetones',
+    component: TarjetonEditComponent,
+},
+{
+    path: 'modoAdmin', 
+    component: AdminScreenComponent 
+},
+{
+    path:'registro',
+    component: RegisterComponent,
+},
+{
+    path: 'resultadosElecciones',
+    component: ElectionResultsComponent,
+},
+{
+    path: 'tarjetones',
+    component: TarjetonesComponent,
+},
+{
+    path: 'candidatos',
+    component: CandidatosComponent,
+},
+{
+    path: 'confirm',
+    component: ConfirmComponent,
+},
+{
+    path: 'success',
+    component: SuccessComponent,
+}
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {}),
-    HomeRoutingModule,
-    DetailRoutingModule
+    ConfigComponent,
+    TarjetonEditComponent,
+    AdminScreenComponent,
+    RegisterComponent,
+    ElectionResultsComponent,
+    TarjetonesComponent,
+    CandidatosComponent,
+    ConfirmComponent,
+    SuccessComponent
   ],
   exports: [RouterModule]
 })
