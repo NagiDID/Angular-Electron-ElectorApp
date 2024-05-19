@@ -21,7 +21,7 @@ export class CandidatosComponent {
 
     const storedIndex = localStorage.getItem('lastClickedIndex');
     if (storedIndex) {
-      this.showList(JSON.parse(storedIndex))
+      this.showList(Number(JSON.parse(storedIndex)))
     }
 
     this.loadTarjetones();

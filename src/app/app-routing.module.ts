@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageNotFoundComponent } from './shared/components';
 
 import { ConfigComponent } from './pages/config/config.component';
 import { TarjetonEditComponent } from './pages/config/tarjeton-edit/tarjeton-edit.component';
